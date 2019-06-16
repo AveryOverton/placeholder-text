@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>placeholder-text example</title>
+    <style>
+        @media (max-width: 768px) {
+            section {
+                width: 80vw;
+            }
+        }
+
+        section {
+            display: flex;
+            flex-direction: column;
+            margin: 10vw auto;
+            width: 40vw;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <h1 data-placeholder-text="heading, 5, 6">heading</h1>
+        <span data-placeholder-text="capitalize, 2, 2">capitalize</span>
+        <em data-placeholder-text="sentence, 4, 6">sentence</em>
+        <p data-placeholder-text="paragraph, 10, 15">paragraph</p>
+    </section>
+    <script src="dist/index.js"></script>
+</body>
+
+</html>

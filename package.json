@@ -1,0 +1,68 @@
+{
+    "author": "Avery Overton",
+    "babel": {
+        "presets": [
+            [
+                "@babel/preset-env",
+                {
+                    "loose": true
+                }
+            ]
+        ]
+    },
+    "browserslist": [
+        ">= 1%",
+        "last 1 major version",
+        "not dead"
+    ],
+    "bugs": {
+        "url": "https://github.com/AveryOverton/placeholder-text/issues"
+    },
+    "description": "Generate randomly generated placeholder text in HTML",
+    "devDependencies": {
+        "@babel/cli": "^7.4.4",
+        "@babel/core": "^7.4.5",
+        "@babel/preset-env": "^7.4.5",
+        "eslint": "^5.16.0",
+        "eslint-config-standard": "^12.0.0",
+        "eslint-plugin-import": "^2.17.3",
+        "eslint-plugin-node": "^9.1.0",
+        "eslint-plugin-promise": "^4.1.1",
+        "eslint-plugin-standard": "^4.0.0",
+        "npm-run-all": "^4.1.5",
+        "terser": "^4.0.0"
+    },
+    "eslintConfig": {
+        "env": {
+            "browser": true,
+            "es6": true
+        },
+        "extends": "standard",
+        "globals": {
+            "Atomics": "readonly",
+            "SharedArrayBuffer": "readonly"
+        },
+        "parserOptions": {
+            "ecmaVersion": 2018
+        },
+        "rules": {}
+    },
+    "homepage": "https://github.com/AveryOverton/placeholder-text#readme",
+    "keywords": [
+        "placeholder",
+        "text"
+    ],
+    "license": "MIT",
+    "name": "placeholder-text",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/AveryOverton/placeholder-text.git"
+    },
+    "scripts": {
+        "babel": "babel src --out-dir dist",
+        "build": "run-s eslint babel terser",
+        "eslint": "eslint src --fix",
+        "terser": "terser dist/index.js --output dist/index.js --mangle"
+    },
+    "version": "1.0.0"
+}
